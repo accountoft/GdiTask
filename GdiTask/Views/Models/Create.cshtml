@@ -1,0 +1,78 @@
+﻿@model GdiTask.Models.Model
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Model</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Id" class="control-label"></label>
+                <input asp-for="Id" class="form-control" />
+                <span asp-validation-for="Id" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ObsegIdentifikacije" class="control-label"></label>
+                <input asp-for="ObsegIdentifikacije" class="form-control" />
+                <span asp-validation-for="ObsegIdentifikacije" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="OmejenObsegIdentifikacije" /> @Html.DisplayNameFor(model => model.OmejenObsegIdentifikacije)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="DavcnaStevilka" class="control-label"></label>
+                <input asp-for="DavcnaStevilka" class="form-control" />
+                <span asp-validation-for="DavcnaStevilka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="MaticnaStevilka" class="control-label"></label>
+                <input asp-for="MaticnaStevilka" class="form-control" />
+                <span asp-validation-for="MaticnaStevilka" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="DatumPO" class="control-label"></label>
+                <input asp-for="DatumPO" class="form-control" />
+                <span asp-validation-for="DatumPO" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Skd" class="control-label"></label>
+                <input asp-for="Skd" class="form-control" />
+                <span asp-validation-for="Skd" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImePodjetja" class="control-label"></label>
+                <input asp-for="ImePodjetja" class="form-control" />
+                <span asp-validation-for="ImePodjetja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="NaslovPodjetja" class="control-label"></label>
+                <input asp-for="NaslovPodjetja" class="form-control" />
+                <span asp-validation-for="NaslovPodjetja" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ObcinskaEnota" class="control-label"></label>
+                <input asp-for="ObcinskaEnota" class="form-control" />
+                <span asp-validation-for="ObcinskaEnota" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

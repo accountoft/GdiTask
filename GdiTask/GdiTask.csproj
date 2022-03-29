@@ -1,0 +1,34 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>aspnet-GdiTask-A7FBCE20-E1F1-4840-B338-BA27D0AA5226</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Data\Migrations\20211017164607_ZavezanciPoMigracija.cs" />
+    <Compile Remove="Data\Migrations\20211017164607_ZavezanciPoMigracija.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211017191327_ZavezanciPoMigracija3.cs" />
+    <Compile Remove="Data\Migrations\20211017191327_ZavezanciPoMigracija3.Designer.cs" />
+    <Compile Remove="Data\Migrations\20211017191412_ZavezanciPoMigracija3.cs" />
+    <Compile Remove="Data\Migrations\20211017191412_ZavezanciPoMigracija3.Designer.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.EntityFrameworkCore" Version="3.1.17" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="3.1.17" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="3.1.20" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="3.1.20">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.5" />
+    <PackageReference Include="System.IO.Compression.ZipFile" Version="4.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="extractZip\" />
+  </ItemGroup>
+
+</Project>
